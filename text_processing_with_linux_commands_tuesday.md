@@ -38,10 +38,14 @@ Example: wc command is to count data in a given file. -l parameter is for counti
 
 ### 3. How many unique first names are in fullnames_with_age.txt?
 
-Put screenshot from Codespaces illustrating the result here.
-Correct screenshot should contain your github username in the shell, a command and the result.
+![Task 3](task3.png)
 
-**Explanation** Write the explanation why the specific command was used.
+1. `grep` - Extract only the first names from the file
+   - `-o` - Get only the matched parts, not the whole line
+   - `"^[a-zA-Z]* "` - A regexp that only matches the first name
+2. `uniq` - Filter the names to only contain distinct names
+3. `wc` - Count the resulting names and print the count
+   - `-l` - Only show the line count
 
 ---
 
