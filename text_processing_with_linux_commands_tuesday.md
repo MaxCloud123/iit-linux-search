@@ -90,10 +90,11 @@ Example: wc command is to count data in a given file. -l parameter is for counti
 
 ### 6. How many lines in system_small.log have ok=true?
 
-Put screenshot from Codespaces illustrating the result here.
-Correct screenshot should contain your github username in the shell, a command and the result.
+![Task 6](task6.png)
 
-**Explanation** Write the explanation why the specific command was used.
+1. `grep` - Get only lines in the file that have "ok=true"
+2. `wc` - Print the line count
+   `-l` - Count lines, not words
 
 ---
 
