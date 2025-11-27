@@ -100,10 +100,19 @@ Example: wc command is to count data in a given file. -l parameter is for counti
 
 ### 7, Which level (INFO, WARN, ERROR) appears most often in system_small.log?
 
-Put screenshot from Codespaces illustrating the result here.
-Correct screenshot should contain your github username in the shell, a command and the result.
+![Task 7](task7.png)
 
-**Explanation** Write the explanation why the specific command was used.
+1. `grep` - Get the level from each line (`cut`'s output isn't reliable, because the file is a little damaged)
+   - `-o` - Only get the matched parts, not the whole line
+   - `"level=[A-Z]* "` - Regexp to match only the level part
+2. `sort` - Sort the results for `uniq`
+3. `uniq` - Count occurences for each unique level
+   - `-c` - Print counts for each level
+4. `sort` - Sort the results to find the most often logged level
+   - `-n` - Sort by numerical values
+   - `-r` - Sort from highest to lowest
+5. `head` - Print the most often used level
+   - `-n 1` - Show only the first line of the results
 
 ---
 
